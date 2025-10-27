@@ -9,7 +9,7 @@ function App() {
 
   // Fetch workshop details from backend
   useEffect(() => {
-    fetch(import.meta.env.VITE_API_URL ||"http://localhost:5000/api/workshop") 
+    fetch(`${import.meta.env.VITE_API_URL}/api/workshop` ||"http://localhost:5000/api/workshop") 
       .then((res) => res.json())
       .then((data) => {
         setWorkshop(data);
